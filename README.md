@@ -1,20 +1,41 @@
-# Run an MCP Server on Vercel
+# Chuck Norris Jokes MCP Server for Vercel
 
-## Usage
+This is a Model Context Protocol (MCP) server that provides access to the Chuck Norris Jokes API. It allows AI assistants like Claude to fetch and search for Chuck Norris jokes.
 
-Update `api/server.ts` with your tools, prompts, and resources following the [MCP TypeScript SDK documentation](https://github.com/modelcontextprotocol/typescript-sdk/tree/main?tab=readme-ov-file#server).
+## Features
 
-## Notes for running on Vercel
+- Get random Chuck Norris jokes
+- Get jokes from specific categories
+- List all available joke categories
+- Search for jokes by text
 
-- Requires a Redis attached to the project under `process.env.REDIS_URL`
-- Make sure you have [Fluid compute](https://vercel.com/docs/functions/fluid-compute) enabled for efficient execution
-- After enabling Fluid compute, open `vercel.json` and adjust max duration to 800 if you using a Vercel Pro or Enterprise account
-- [Deploy the MCP template](https://vercel.com/templates/other/model-context-protocol-mcp-with-vercel-functions)
+## Tools
 
-## Sample Client
+The MCP server provides the following tools:
 
-`script/test-client.mjs` contains a sample client to try invocations.
+1. `get-random-joke` - Fetches a random Chuck Norris joke
+2. `get-joke-from-category` - Fetches a random joke from a specified category
+3. `get-categories` - Lists all available joke categories
+4. `search-jokes` - Searches for jokes containing specific text
 
-```sh
-node scripts/test-client.mjs https://mcp-on-vercel.vercel.app
+## Deployment
+
+The server is designed to be deployed on Vercel. You can deploy it with the following steps:
+
+1. Fork or clone this repository
+2. Deploy to Vercel with `vercel deploy`
+3. Once deployed, you can use the deployed URL as an MCP server in compatible clients
+
+## Sample Usage
+
+You can test the MCP server using any MCP-compatible client. Here's an example using the MCP CLI:
+
+```bash
+npx @modelcontextprotocol/cli your-vercel-deployment-url
 ```
+
+## Credits
+
+- Jokes provided by [api.chucknorris.io](https://api.chucknorris.io/)
+- Built with the [Model Context Protocol](https://modelcontextprotocol.io/)
+- Hosted on [Vercel](https://vercel.com/)

@@ -31,7 +31,7 @@ The server is designed to be deployed on Vercel. You can deploy it with the foll
 You can test the MCP server using any MCP-compatible client. Here's an example using the MCP CLI:
 
 ```bash
-npx @modelcontextprotocol/cli your-vercel-deployment-url
+npx @modelcontextprotocol/[cli your-vercel-deployment-url](https://mcp-chuck-norris.vercel.app/)
 ```
 
 ## Credits
